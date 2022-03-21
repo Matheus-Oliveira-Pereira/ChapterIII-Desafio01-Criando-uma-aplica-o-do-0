@@ -58,7 +58,6 @@ export default function Home({ postsPagination }: HomeProps) {
 
     try{
       const newPostsPagination = await fetch(`${nextPage}`).then(res => res.json())
-      console.log(newPostsPagination)
       setNextPage(newPostsPagination.next_page)
 
       const newsPosts = newPostsPagination.results.map(post => {

@@ -37,7 +37,6 @@ export default function Post({post}:PostProps) {
   const router = useRouter()
 
   const totalWords = post.data.content.reduce((total, iten) => {
-    console.log(iten.heading)
     if(iten.heading){
       total += iten.heading.split(' ').length; 
     }
